@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Advanced - MkDocs Quickstart</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Starter template for a MkDocs docs site on GH Pages - including CI">
+<meta name="generator" content="mkdocs-1.5.0, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../../css/style.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search" />
+</div> <!-- end of book-search-input -->
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href="../.." target="_blank" class="custom-link">MkDocs Quickstart</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="../..">Home</a>
+<li class="chapter" data-path="about-mkdocs/">
+<a href="../../about-mkdocs/">About MkDocs</a>
+<li class="header">Tutorial</li>
+
+<li>
+<a href="../tldr/" class="">TL;DR</a>
+</li>
+
+<li>
+<a href="../installation/" class="">Installation</a>
+</li>
+
+<li>
+<a href="../setup-project/" class="">Set up project</a>
+</li>
+
+<li>
+<a href="./" class="active">Advanced</a>
+</li>
+
+<li>
+<a href="../usage/" class="">Usage</a>
+</li>
+
+<li>
+<a href="../deploy/" class="">Deploy</a>
+</li>
+
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="advanced">Advanced</h1>
+<blockquote>
+<p>Beyond the basic configuration and content</p>
+</blockquote>
+<p>Once you've got the <a href="../setup-project/">Set up Project</a> section, you can customize further using this guide. Or skip this and go to <a href="../usage/">Usage</a>.</p>
+<h2 id="navbar-nesting">Navbar nesting</h2>
+<p>You can add an additional level to your navbar like this:</p>
+<pre><code class="language-yaml">nav:
+  - Home: index.md
+  - About: about.md
+  - Foo:
+      - Overview: foo/index.md
+      - Bar: foo/bar.md
+</code></pre>
+<p>The value can either be a string (as in the first case) or a map (as in the last case). This seems to be a YAML limitation but see also <a href="https://github.com/mkdocs/mkdocs/issues/1139">issue #1139</a>.</p>
+<h2 id="add-config-options">Add config options</h2>
+<p>See <a href="https://www.mkdocs.org/user-guide/configuration/">Configuration</a> page on MkDocs site for options.</p>
+<h2 id="separate-docs-directory-approach">Separate docs directory approach</h2>
+<p>You can also structure your project to have the set up above nested inside a <code>docs</code> directory. This is useful you have a few other directories and you want to keep the project root clean.</p>
+<ul>
+<li><code>docs/</code><ul>
+<li><code>docs/</code><ul>
+<li><code>index.md</code></li>
+</ul>
+</li>
+<li><code>theme/</code><ul>
+<li><code>main.html</code></li>
+<li><code>nav.html</code></li>
+<li><code>toc.html</code></li>
+</ul>
+</li>
+<li><code>mkdocs.yml</code></li>
+</ul>
+</li>
+</ul>
+<p>An example of this is the <a href="https://github.com/python-poetry/poetry/tree/master/docs">Poetry</a> repo. That  project is also how I got into MkDocs in the first place.</p>
+<h2 id="embedding">Embedding</h2>
+<p>To embed a gist, just copy and paste the embed script URL which is provided on a gist.</p>
+<p>e.g.</p>
+<pre><code class="language-html">&lt;script src=&quot;https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+
+</section>
+</div> <!-- end of search-noresults -->
+<div class="search-results">
+<div class="has-results">
+
+<h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+<ul class="search-results-list"></ul>
+
+</div> <!-- end of has-results -->
+<div class="no-results">
+
+<h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+
+</div> <!-- end of no-results -->
+</div> <!-- end of search-results -->
+</div> <!-- end of book-search-results -->
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../../js/main.js"></script>
+<script src="../../search/main.js"></script>
+<script src="../../js/gitbook.min.js"></script>
+<script src="../../js/theme.min.js"></script>
+</body>
+</html>
